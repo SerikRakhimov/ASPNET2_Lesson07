@@ -1,0 +1,12 @@
+﻿<p>
+    <h3 class="text-success">Поиск пациентов по ФИО</h3>
+</p>
+
+<Form method="post" action="/Patients/Index">
+    <div class="form-group">
+        <label for="Name" class="text-primary">ФИО</label>
+        <input class="form-control" name="Name" value="@ViewBag.Name" type="text" id="Name">
+    </div>
+    <button class="btn-primary btn-lg" type="submit">Найти</button>
+</Form>
+

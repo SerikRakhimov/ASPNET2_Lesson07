@@ -1,0 +1,11 @@
+﻿<p>
+    <h3 class="text-success">Поиск пациентов по ИИН</h3>
+</p>
+
+<Form method="post" action="/Patients/Index">
+    <div class="form-group">
+        <label for="Iin" class="text-primary">ИИН</label>
+        <input class="form-control" name="Iin" value="@ViewBag.Iin" type="text" id="Iin">
+    </div>
+    <button class="btn-primary btn-lg" type="submit">Найти</button>
+</Form>

@@ -1,0 +1,65 @@
+﻿@model  PatientCard.Web.ViewModel.JournalViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Patient</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(vm => vm.Patient.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(vm => vm.Patient.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(vm => vm.Patient.Iin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(vm => vm.Patient.Iin)
+        </dd>
+
+    </dl>
+</div>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Doctor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Diagnosis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateVisit)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in (IEnumerable<PatientCard.Model.Models.Journal>)ViewBag.Journals)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Doctor.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Diagnosis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateVisit)
+            </td>
+        </tr>
+    }
+
+</table>
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
+

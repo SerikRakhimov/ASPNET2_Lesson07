@@ -1,0 +1,14 @@
+﻿<p>
+    <h3 class="text-success">Журнал за интервал дат</h3>
+</p>
+
+<Form method="post" action="/Journals/Index">
+    <div class="form-group">
+        <label for="Date1" class="text-primary">С</label>
+        <input class="form-control" name="Date1" value="@ViewBag.Date1" type="datetime" id="Date1">
+        <label for="Date2" class="text-primary">по</label>
+        <input class="form-control" name="Date2" value="@ViewBag.Date2" type="datetime" id="Date2">
+    </div>
+    <button class="btn-primary btn-lg" type="submit">Найти</button>
+</Form>
+
